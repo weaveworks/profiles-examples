@@ -1,21 +1,14 @@
 apiVersion: profiles.fluxcd.io/v1alpha1
 kind: Profile
 metadata:
-  name: weaveworks-nginx
+  name: nginx
 spec:
   description: Profile for deploying nginx
-  version: v0.1.0
+  version: v0.0.1
   artifacts:
-    - name: nested-profile
-      kind: Profile
-      profile:
-        url: https://github.com/weaveworks/profiles-examples
-        version: bitnami-nginx/v0.0.1
-    - name: nginx-deployment
-      path: nginx/deployment
-      kind: Kustomize
-    - name: dokuwiki
+    - name: invalid-artifact
       kind: HelmChart
+      path: nginx/deployment
       chart:
         url: https://charts.bitnami.com/bitnami
         name: dokuwiki
