@@ -17,6 +17,6 @@ The `weaveworks-nginx` profile is a profile consisting of 3 artifacts:
 - The `bitnami-nginx` profile.
 
 This profile demonstrates the 3 different types of artifacts you can write in a profile, and how the layout works. The
-profile itself doesn't deploy anything meaningful, its just exists to demonstrate.
+profile itself doesn't deploy anything meaningful, it just exists to demonstrate.
 
 Tag `weaveworks-nginx/v0.1.0` exists and can be used to consume `v0.1.0` of `weaveworks-nginx`
