@@ -5,7 +5,7 @@ This an example profile repository. It contains two profiles, `weaveworks-nginx`
 
 The `bitnami-nginx` profile is a profile consisting of a local chart, this local chart is a copy of the
 [bitnami/nginx helm chart](https://github.com/bitnami/charts/tree/master/bitnami/nginx). When you deploy
-this profile, it deloys the helm chart
+this profile, it deploys the helm chart
 
 Tag `bitnami-nginx/v0.0.1` exists and can be used to consume `v0.0.1` of the `bitnami-nginx` profile.
 
