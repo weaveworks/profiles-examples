@@ -1,4 +1,4 @@
-apiVersion: profiles.fluxcd.io/v1alpha1
+apiVersion: packages.weave.works/v1alpha1
 kind: Profile
 metadata:
   name: bitnami-nginx
