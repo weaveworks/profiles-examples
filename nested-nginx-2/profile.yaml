@@ -1,0 +1,11 @@
+apiVersion: profiles.fluxcd.io/v1alpha1
+kind: Profile
+metadata:
+  name: nested-nginx-2
+spec:
+  description: Profile for deploying local nginx chart
+  version: v0.0.1
+  artifacts:
+    - name: nginx-server
+      path: nginx/chart
+      kind: HelmChart

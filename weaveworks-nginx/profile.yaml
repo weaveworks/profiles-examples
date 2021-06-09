@@ -4,19 +4,10 @@ metadata:
   name: weaveworks-nginx
 spec:
   description: Profile for deploying nginx
-  version: v0.1.0
+  version: v0.0.1
   artifacts:
-    - name: nested-profile
+    - name: nested-nginx-1
       kind: Profile
       profile:
         url: https://github.com/weaveworks/profiles-examples
-        version: bitnami-nginx/v0.0.1
-    - name: nginx-deployment
-      path: nginx/deployment
-      kind: Kustomize
-    - name: dokuwiki
-      kind: HelmChart
-      chart:
-        url: https://charts.bitnami.com/bitnami
-        name: dokuwiki
-        version: "11.1.6"
+        version: nested-nginx-1/v0.0.1
