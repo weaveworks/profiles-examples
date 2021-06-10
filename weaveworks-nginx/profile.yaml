@@ -9,9 +9,3 @@ spec:
     - name: nginx-deployment
       path: nginx/deployment
       kind: Kustomize
-    - name: dokuwiki
-      kind: HelmChart
-      chart:
-        url: https://charts.bitnami.com/bitnami
-        name: dokuwiki
-        version: "11.1.6"
