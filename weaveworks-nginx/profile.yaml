@@ -6,11 +6,6 @@ spec:
   description: Profile for deploying nginx
   version: v0.1.0
   artifacts:
-    - name: nested-profile
-      kind: Profile
-      profile:
-        url: https://github.com/weaveworks/profiles-examples
-        version: bitnami-nginx/v0.0.1
     - name: nginx-deployment
       path: nginx/deployment
       kind: Kustomize
