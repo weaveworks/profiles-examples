@@ -13,7 +13,7 @@ spec:
       profile:
         source:
           url: https://github.com/aclevername/profiles-examples
-          tag: bitnami-nginx/v0.0.1
+          tag: bitnami-nginx/v0.1.0
     - name: nginx-deployment
       kustomize:
         path: nginx/deployment
