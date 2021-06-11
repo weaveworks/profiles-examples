@@ -1,11 +1,14 @@
-apiVersion: profiles.fluxcd.io/v1alpha1
-kind: Profile
+apiVersion: weave.works/v1alpha1
+kind: ProfileDefinition
 metadata:
   name: bitnami-nginx
 spec:
+  name: bitnami-nginx
   description: Profile for deploying local nginx chart
-  version: v0.0.1
+  maintainer: weaveworks
+  prerequisites:
+    - "kubernetes 1.19"
   artifacts:
     - name: nginx-server
-      path: nginx/chart
-      kind: HelmChart
+      chart:
+        path: nginx/chart
