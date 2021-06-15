@@ -12,3 +12,5 @@ spec:
     - name: nginx-server
       chart:
         path: nginx/chart
+        defaultValues: |
+          replicaCount: 3
