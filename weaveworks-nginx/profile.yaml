@@ -1,11 +1,14 @@
-apiVersion: profiles.fluxcd.io/v1alpha1
-kind: Profile
+apiVersion: weave.works/v1alpha1
+kind: ProfileDefinition
 metadata:
   name: weaveworks-nginx
 spec:
+  name: weaveworks-nginx
   description: Profile for deploying nginx
-  version: v0.1.0
+  maintainer: weaveworks
+  prerequisites:
+    - "kubernetes 1.19"
   artifacts:
     - name: nginx-deployment
-      path: nginx/deployment
-      kind: Kustomize
+      kustomize:
+        path: nginx/deployment
