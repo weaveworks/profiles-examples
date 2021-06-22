@@ -17,8 +17,11 @@ spec:
     - name: nginx-deployment
       kustomize:
         path: nginx/deployment
-    - name: dokuwiki
+    - name: nginx-chart
       chart:
         url: https://charts.bitnami.com/bitnami
-        name: dokuwiki
-        version: "11.1.6"
+        name: nginx
+        version: "9.3.0"
+        defaultValues: |
+          service:
+            type: ClusterIP
