@@ -3,7 +3,6 @@ kind: ProfileDefinition
 metadata:
   name: bitnami-nginx
 spec:
-  name: bitnami-nginx
   description: Profile for deploying local nginx chart
   maintainer: weaveworks
   prerequisites:
