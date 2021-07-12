@@ -1,0 +1,20 @@
+apiVersion: weave.works/v1alpha1
+kind: ProfileDefinition
+metadata:
+  name: depends-on-nginx
+spec:
+  description: Profile for deploying a depends on nginx
+  maintainer: weaveworks
+  prerequisites:
+    - "kubernetes 1.19"
+  artifacts:
+    - name: depend-on-this
+      chart:
+        path: nginx/chart 
+    - name: nginx-chart
+      chart:
+        url: https://charts.bitnami.com/bitnami
+        name: nginx
+        version: "9.3.0"
+      dependsOn:
+        name: depend-on-this
