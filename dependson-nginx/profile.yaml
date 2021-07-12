@@ -1,0 +1,31 @@
+apiVersion: weave.works/v1alpha1
+kind: ProfileDefinition
+metadata:
+  name: dependson-nginx
+spec:
+  description: Profile for deploying a depends on nginx
+  maintainer: weaveworks
+  prerequisites:
+    - "kubernetes 1.19"
+  artifacts:
+    - name: dependon
+      chart:
+        url: https://charts.bitnami.com/bitnami
+        name: redis
+        version: "14.6.1"
+        defaultValues: |
+          master:
+            persistence:
+              enabled: false
+          replica:
+            replicaCount: 0
+    - name: nginx-chart
+      chart:
+        url: https://charts.bitnami.com/bitnami
+        name: nginx
+        version: "9.3.0"
+        defaultValues: |
+          service:
+            type: ClusterIP
+      dependsOn:
+        name: dependon
