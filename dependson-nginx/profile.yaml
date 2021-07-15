@@ -21,3 +21,12 @@ spec:
             type: ClusterIP
       dependsOn:
         - name: dependon
+        - name: dependon2
+    - name: dependon2
+      chart:
+        url: https://charts.bitnami.com/bitnami
+        name: nginx
+        version: "9.3.0"
+        defaultValues: |
+          service:
+            type: ClusterIP
