@@ -27,11 +27,14 @@ spec:
     - name: dependon-chart
       chart:
         url: https://charts.bitnami.com/bitnami
-        name: nginx
-        version: "9.3.0"
+        name: redis
+        version: "14.6.1"
         defaultValues: |
-          service:
-            type: ClusterIP
+          master:
+            persistence:
+              enabled: false
+          replica:
+            replicaCount: 0
       dependsOn:
         - name: nginx-deployment
         - name: nginx-chart
