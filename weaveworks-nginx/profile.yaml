@@ -24,3 +24,14 @@ spec:
         defaultValues: |
           service:
             type: ClusterIP
+    - name: dependon-chart
+      chart:
+        url: https://charts.bitnami.com/bitnami
+        name: nginx
+        version: "9.3.0"
+        defaultValues: |
+          service:
+            type: ClusterIP
+      dependsOn:
+        - name: nginx-deployment
+        - name: nginx-chart
