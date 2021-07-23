@@ -38,3 +38,4 @@ spec:
       dependsOn:
         - name: nginx-deployment
         - name: nginx-chart
+        - name: nested-profile
