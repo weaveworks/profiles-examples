@@ -17,4 +17,4 @@ spec:
       chart:
         path: mynginx/chart
         defaultValues: |
-          replicaCount: 3
+          replicaCount: 19
