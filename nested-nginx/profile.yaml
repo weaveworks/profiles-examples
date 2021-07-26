@@ -1,0 +1,15 @@
+apiVersion: weave.works/v1alpha1
+kind: ProfileDefinition
+metadata:
+  name: nested-nginx
+spec:
+  description: Profile for deploying nested nginx chart
+  maintainer: weaveworks
+  prerequisites:
+    - "kubernetes 1.19"
+  artifacts:
+    - name: nested-profile2
+      profile:
+        source:
+          url: https://github.com/weaveworks/profiles-examples
+          tag: bitnami-nginx/v0.0.1

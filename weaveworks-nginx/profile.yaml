@@ -8,11 +8,11 @@ spec:
   prerequisites:
     - "kubernetes 1.19"
   artifacts:
-    - name: nested-profile
+    - name: nested-profile1
       profile:
         source:
           url: https://github.com/weaveworks/profiles-examples
-          tag: bitnami-nginx/v0.0.1
+          tag: nested-nginx/v0.0.1
     - name: nginx-deployment
       kustomize:
         path: nginx/deployment
