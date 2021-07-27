@@ -13,6 +13,11 @@ spec:
         source:
           url: https://github.com/weaveworks/profiles-examples
           tag: bitnami-nginx/v0.0.1
+    - name: nested-profile3
+      profile:
+        source:
+          url: https://github.com/weaveworks/profiles-examples
+          tag: bitnami-nginx/v0.0.1
     - name: nginx-server
       chart:
         path: mynginx/chart
