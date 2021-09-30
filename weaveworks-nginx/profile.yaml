@@ -12,7 +12,7 @@ spec:
       profile:
         source:
           url: https://github.com/weaveworks/profiles-examples
-          tag: bitnami-nginx/v0.0.1
+          tag: bitnami-nginx/v0.0.2
     - name: nginx-deployment
       kustomize:
         path: nginx/deployment
