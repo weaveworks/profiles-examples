@@ -37,4 +37,21 @@ entries:
     urls:
     - https://stefanprodan.github.io/podinfo/podinfo-6.0.0.tgz
     version: 6.0.0
+  - annotations:
+      not-a-profile: "because I don't have the correct annotation"
+    apiVersion: v1
+    appVersion: 5.0.0
+    created: "2021-03-22T10:10:24.565752209Z"
+    description: Podinfo Helm chart for Kubernetes
+    digest: 43cdf797e2b31973542b3fb596086f5e7e13074d9a9693f40208e6387c5a9028
+    home: https://github.com/stefanprodan/podinfo
+    maintainers:
+    - email: stefanprodan@users.noreply.github.com
+      name: stefanprodan
+    name: podinfo
+    sources:
+    - https://github.com/stefanprodan/podinfo
+    urls:
+    - https://stefanprodan.github.io/podinfo/podinfo-5.0.0.tgz
+    version: 5.0.0
 generated: "2021-10-22T12:43:53.088606365Z"
