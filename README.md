@@ -1,22 +1,19 @@
 # profiles-examples
-This an example profile repository. It contains two profiles, `weaveworks-nginx` and `bitnami-nginx`
+This repository is used to host a dummy Helm Repository. You can checkout the `gh-pages` branch to find the HelmRepository files.
+You can access this repo as a Helm Repository via `https://weaveworks.github.io/profiles-examples`
 
-## Bitnami nginx
+IMPORTANT: This repo is used in tests in github.com/weaveworks/weave-gitops. When making a change to this repository
+that might break the tests, please ensure you have a PR ready to fix them in github.com/weaveworks/weave-gitops.
 
-The `bitnami-nginx` profile is a profile consisting of a local chart, this local chart is a copy of the
-[bitnami/nginx helm chart](https://github.com/bitnami/charts/tree/master/bitnami/nginx). When you deploy
-this profile, it deploys the helm chart
-
-Tag `bitnami-nginx/v0.0.1` exists and can be used to consume `v0.0.1` of the `bitnami-nginx` profile.
-
-## Weaveworks nginx
-The `weaveworks-nginx` profile is a profile consisting of 3 artifacts:
-
-- A helm chart pointing to `bitnami/dokuwiki`
-- A local `deloyment.yaml`
-- The `bitnami-nginx` profile.
-
-This profile demonstrates the 3 different types of artifacts you can write in a profile, and how the layout works. The
-profile itself doesn't deploy anything meaningful, it just exists to demonstrate.
-
-Tag `weaveworks-nginx/v0.1.0` exists and can be used to consume `v0.1.0` of the `weaveworks-nginx` profile.
+Example `HelmRepository` resource:
+```
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: weaveworks-charts
+  namespace: test-namespace
+spec:
+  interval: 1m0s
+  timeout: 1m0s
+  url: https://weaveworks.github.io/profiles-examples
+```
